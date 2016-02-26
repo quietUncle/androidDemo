@@ -1,1 +1,1 @@
-include ':EventBus3.0Demo'
+include ':EventBus3.0Demo', ':logutli'
