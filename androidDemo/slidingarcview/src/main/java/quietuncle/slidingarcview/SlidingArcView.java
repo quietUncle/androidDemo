@@ -142,7 +142,7 @@ public class SlidingArcView extends ViewGroup {
             case MotionEvent.ACTION_UP:
                 //先判断是否是点击事件
                 final int pi = event.findPointerIndex(downPointId);
-                if (isClickable() && (((event.getX(pi) - downX) == 0) || (event.getY(pi) - downY == 0))) {
+                if (isClickable() && (Math.abs(event.getX(pi) - downX) <=3) ||Math.abs(event.getY(pi) - downY) <= 3) {
                     if (isFocusable() && isFocusableInTouchMode() && !isFocused())
                         requestFocus();
                     performViewClick();
