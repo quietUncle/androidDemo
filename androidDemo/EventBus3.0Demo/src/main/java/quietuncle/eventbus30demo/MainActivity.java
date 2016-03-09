@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void getThreadModeEventMain(ThreadModeEvent event) {
-        LogUtils.e("main ---"+Thread.currentThread().getName().toString());
+        QTLog.e("main ---"+Thread.currentThread().getName().toString());
         QTLog.e("main ---"+Thread.currentThread().getName().toString());
         Log.e(TAG,"main ---"+Thread.currentThread().getName().toString());
     }
